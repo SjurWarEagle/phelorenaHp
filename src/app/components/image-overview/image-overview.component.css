@@ -1,0 +1,16 @@
+.maingrid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.main-icon{
+  height: 90%;
+  width: auto;
+}

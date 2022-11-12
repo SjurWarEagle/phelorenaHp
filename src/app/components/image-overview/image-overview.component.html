@@ -1,0 +1,30 @@
+<mat-toolbar
+  color="primary">
+  <!--  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
+  <!--    <mat-icon>menu</mat-icon>-->
+  <!--  </button>-->
+  <img class="main-icon" src="assets/icons/phelorCorn.png"/>
+  <span>Phelodina</span>
+  <span class="example-spacer"></span>
+  <!--  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">-->
+  <!--    <mat-icon>favorite</mat-icon>-->
+  <!--  </button>-->
+  <!--  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">-->
+  <!--    <mat-icon>share</mat-icon>-->
+  <!--  </button>-->
+  <p>
+    <mat-form-field class="search">
+      <input type="tel" matInput placeholder="Search" [(ngModel)]="searchString">
+    </mat-form-field>
+  </p>
+  <mat-icon>search</mat-icon>
+</mat-toolbar>
+
+
+<div *ngIf="filteredImageInfo"
+     class="maingrid"
+>
+  <app-image-preview
+    *ngFor="let imageInfo of filteredImageInfo"
+    [imageInfo]="imageInfo"></app-image-preview>
+</div>

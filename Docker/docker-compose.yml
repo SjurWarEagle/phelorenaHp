@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  phelorena-hp:
+    #image: "wareagledocker/phelorena-hp"
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+    ports:
+      - "80:99"
+    volumes:
+      - E:\IdeaProjects\phelorenaHp\src\assets\paintings:/project/dist/phelorena-hp/assets/aintings:ro
