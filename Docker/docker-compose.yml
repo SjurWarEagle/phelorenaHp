@@ -6,6 +6,8 @@ services:
       context: ..
       dockerfile: Docker/Dockerfile
     ports:
-      - "80:99"
+      - "99:80"
     volumes:
-      - E:\IdeaProjects\phelorenaHp\src\assets\paintings:/project/dist/phelorena-hp/assets/aintings:ro
+      - E:\\IdeaProjects\\twitter-downloader\\images:/var/www/html/assets/paintings:ro
+#      - E:\\IdeaProjects\\twitter-downloader\\images:/project/dist/phelorena-hp/assets/paintings:ro
+#      - E:\\IdeaProjects\\phelorenaHp\\src\\assets\\paintings:/project/dist/phelorena-hp/assets/paintings:ro

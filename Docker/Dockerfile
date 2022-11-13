@@ -8,22 +8,21 @@ RUN apt update -y && \
 RUN mkdir -p /project/
 
 WORKDIR /project/
-RUN git clone https://github.com/SjurWarEagle/phelorena-hp .
+RUN git clone https://github.com/SjurWarEagle/phelorenaHp .
+
+ENV NG_CLI_ANALYTICS="false"
 RUN npm install --no-audi --progress=false
 RUN npm run build
+#RUN ls -al .
+RUN mv -v /project/dist/phelorena-hp/* /var/www/html/
 
-
-#TODO convert to copy, this is im this git we just cloned, no need to get it from outside
-ADD Docker/nginx/nginx.conf /etc/nginx/conf.d/default.conf
-RUN rm -rf /etc/apt/apt.conf.d/90nginx
-
-
-EXPOSE 90
-
-STOPSIGNAL SIGTERM
 
 ADD Docker/start.sh /
 RUN chmod +x /start.sh
+
+#RUN mkdir -p /project/dist/phelorena-hp/assets/paintings
+RUN mkdir -p /var/www/html/paintings
+
 
 CMD ["/start.sh"]
 

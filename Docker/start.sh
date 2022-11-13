@@ -1,7 +1,5 @@
-date
-pwd
-id
 nginx -t
-service nginx restart
-cd /project/minion-server/
-npm run start
+#service nginx restart
+#service nginx stop
+
+nginx -g "daemon off;"
