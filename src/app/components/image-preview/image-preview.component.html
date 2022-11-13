@@ -1,17 +1,17 @@
-
 <div
   *ngIf="imageInfo"
   class="card"
 >
-    <div class="preview-title">{{imageInfo.twitterPostTimestamp|date}}</div>
+  <div class="preview-title">{{imageInfo.twitterPostTimestamp|date}}</div>
   <img
+    [routerLink]="['/detail', {mediaId:imageInfo.mediaId}]"
     class="painting-preview"
     [src]="'/assets/paintings/'+imageInfo.mediaId+'.jpg'"
     alt="painting"
   />
-  <div class="image-text">{{imageInfo.twitterPost+filler}}</div>
+  <div class="image-text">{{imageInfo.twitterPost + filler}}</div>
   <!--  <div>{{imageInfo.mediaId}}</div>-->
-<!--  <div>{{imageInfo.twitterPost}}</div>-->
-<!--  <div>{{imageInfo.twitterPostTimestamp}}</div>-->
-<!--  <div>{{imageInfo.twitterId}}</div>-->
+  <!--  <div>{{imageInfo.twitterPost}}</div>-->
+  <!--  <div>{{imageInfo.twitterPostTimestamp}}</div>-->
+  <!--  <div>{{imageInfo.twitterId}}</div>-->
 </div>
