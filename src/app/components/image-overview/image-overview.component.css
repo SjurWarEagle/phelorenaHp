@@ -13,4 +13,6 @@
 .main-icon{
   height: 90%;
   width: auto;
+  margin-right: 0.5em;
+  border-radius: 50%;
 }
