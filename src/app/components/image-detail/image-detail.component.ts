@@ -9,8 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 export class ImageDetailComponent implements OnInit {
   public mediaId?: string | null;
 
-  constructor(private route: ActivatedRoute) {
-  }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.mediaId = this.route.snapshot.paramMap.get('mediaId');

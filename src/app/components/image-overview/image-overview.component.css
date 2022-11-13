@@ -1,4 +1,9 @@
-.maingrid{
+.toolbar {
+  background-color: lightgray;
+  color: #3d3d3d;
+}
+
+.maingrid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -10,9 +15,9 @@
   flex: 1 1 auto;
 }
 
-.main-icon{
+.main-icon {
   height: 90%;
   width: auto;
   margin-right: 0.5em;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
 }
